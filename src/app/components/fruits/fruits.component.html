@@ -1,0 +1,11 @@
+<p class="my-3" appBold>Liste des fruits: </p>
+<ul class="mb-0">
+    <li *ngFor="let fruit of fruits" >
+        <span *ngIf="fruit =='Orange' else defaultFruit" >
+            <b>{{fruit}}</b>
+        </span>
+        <ng-template #defaultFruit>
+              {{fruit}}
+        </ng-template>
+    </li>
+</ul>

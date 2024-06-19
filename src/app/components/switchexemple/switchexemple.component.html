@@ -1,0 +1,17 @@
+<div class="div">
+  <p appBold>Mes couleurs prédéfinis:</p>
+  <div *ngFor="let color of colors">
+    <!-- [style.color]="color" or [style]="{'color': color}" -->
+    <ul [ngSwitch]="color" class="mb-0" [ngStyle]="{'color': color}">
+      <li *ngSwitchCase="'red'">Red color</li>
+      <li *ngSwitchCase="'blue'">Blue color</li>
+      <li *ngSwitchCase="'green'">Green color</li>
+      <li *ngSwitchCase="'yellow'">Yellow color</li>
+      <li *ngSwitchCase="'orange'">Orange color</li>
+      <li *ngSwitchCase="'violet'">Violet color</li>
+      <li *ngSwitchCase="'tourquoise'">Tourquoise color</li>
+      <li *ngSwitchCase="'cyan'">Cyan color</li>
+      <li *ngSwitchDefault>Unknown color</li>
+    </ul>
+  </div>
+</div>

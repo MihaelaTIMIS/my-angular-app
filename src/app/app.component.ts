@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-angular-app';
+
+  ngOnInit(){
+    console.log("test console title", this.title);
+  }
 }

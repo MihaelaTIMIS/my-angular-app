@@ -1,0 +1,10 @@
+<div appBold>
+    <span *ngIf="userLoggedIn else offline">
+        Welcome, {{usename}} !
+    </span>
+    <ng-template #offline>
+        <span>
+            Non connecté
+        </span>
+    </ng-template>
+</div>
