@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./body.component.scss'],
 })
 export class BodyComponent {
-  myInnerHeight= window!.innerHeight;
+  items: string[] = ['First Item', 'Second Item', 'Third Item', 'Fourth Item', 'Fifth Item', 'Sixth Item'];
 }

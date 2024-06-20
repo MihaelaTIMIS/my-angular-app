@@ -1,4 +1,5 @@
-<div class="m-5 px-5 " [style.minHeight]="myInnerHeight">
+<div class="m-5 px-5 ">
+  <app-ifexemple></app-ifexemple>
   <app-ngclass-exemple>
     <p>test brut content projection</p>
     <div list class="bg-warning rounded p-5" style="box-shadow: inset 0px 0px 20px 20px  white">
@@ -12,8 +13,7 @@
       <p> !! Ceci est un test de la projection du contenu avec un selecteur.</p>
     </div>
   </app-ngclass-exemple>
-  <app-ifexemple></app-ifexemple>
-  <app-forexemple></app-forexemple>
+  <app-forexemple [items] = "items"></app-forexemple>
   <app-switchexemple></app-switchexemple>
   <app-fruits></app-fruits>
   <app-increment-decrement></app-increment-decrement>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-forexemple',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./forexemple.component.scss'],
 })
 export class ForexempleComponent {
-  items: string[] = ['Citron', 'Orange', 'Cérise', 'Fraise', 'Banane', 'Poire'];
+  @Input() items : string[] = []
+  // fruits: string[] = ['Citron', 'Orange', 'Cérise', 'Fraise', 'Banane', 'Poire'];
 }
