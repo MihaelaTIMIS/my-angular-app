@@ -3,4 +3,29 @@
   <ul>
     <li *ngFor="let item of items">{{ item }}</li>
   </ul>
+  <form class="row g-3">
+    <div class="col-auto">
+      <label for="elementInput" class="form-control-plaintext"
+        >Ajouter un élément dans la liste:
+      </label>
+    </div>
+    <div class="col-auto">
+      <input
+        #input
+        type="text"
+        class="form-control"
+        id="elementInput"
+        placeholder="Saisissez un élément"
+      />
+    </div>
+    <div class="col-auto">
+      <button
+        type="submit"
+        class="btn btn-primary mb-3"
+        (click)="onAdd(input.value)"
+      >
+        Ajouter
+      </button>
+    </div>
+  </form>
 </div>

@@ -13,7 +13,7 @@
       <p> !! Ceci est un test de la projection du contenu avec un selecteur.</p>
     </div>
   </app-ngclass-exemple>
-  <app-forexemple [items] = "items"></app-forexemple>
+  <app-forexemple [items] = "items" (addItemClick) ="onAddItemClick($event)"></app-forexemple>
   <app-switchexemple></app-switchexemple>
   <app-fruits [fruits] = "fruits"></app-fruits>
   <app-increment-decrement></app-increment-decrement>

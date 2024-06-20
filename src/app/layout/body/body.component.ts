@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class BodyComponent {
   items: string[] = ['First Item', 'Second Item', 'Third Item', 'Fourth Item', 'Fifth Item', 'Sixth Item'];
   fruits: string [] = ["Pomme", "Fraise", "Banane", "Orange", "Ananas", "Grenadine"]
+
+  onAddItemClick(newItem: string){
+    this.items.push(newItem);
+    this.items.sort()
+  }
 }

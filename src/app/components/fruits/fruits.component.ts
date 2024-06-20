@@ -1,4 +1,4 @@
-import { Component, Directive, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-fruits',
@@ -7,5 +7,5 @@ import { Component, Directive, Input } from '@angular/core';
 })
 
 export class FruitsComponent {
-  @Input() fruits : string[] = []
+  @Input() fruits : string[] = [];
 }

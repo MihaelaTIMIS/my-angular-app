@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-forexemple',
@@ -7,5 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class ForexempleComponent {
   @Input() items : string[] = []
-  // fruits: string[] = ['Citron', 'Orange', 'Cérise', 'Fraise', 'Banane', 'Poire'];
+  @Output() addItemClick = new EventEmitter()
+
+  onAdd(item: string){
+    if(item === '') return 
+    this.addItemClick.emit(item)
+  }
 }
