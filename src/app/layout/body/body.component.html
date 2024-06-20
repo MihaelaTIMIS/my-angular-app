@@ -1,5 +1,17 @@
-<div class="m-5 px-5" [style.minHeight]="myInnerHeight">
-  <app-ngclass-exemple></app-ngclass-exemple>
+<div class="m-5 px-5 " [style.minHeight]="myInnerHeight">
+  <app-ngclass-exemple>
+    <p>test brut content projection</p>
+    <div list class="bg-warning rounded p-5" style="box-shadow: inset 0px 0px 20px 20px  white">
+      <p>&nbsp;Liste des éléments projétés depuis l'exterieur par un selecteur :</p>
+      <ul>
+        <li>un élément</li>
+        <li>un deuxième élément</li>
+      </ul>
+    </div>
+    <div other class="bg-warning p-4 text-center" style="box-shadow: inset 0px 0px 20px 20px  white">
+      <p> !! Ceci est un test de la projection du contenu avec un selecteur.</p>
+    </div>
+  </app-ngclass-exemple>
   <app-ifexemple></app-ifexemple>
   <app-forexemple></app-forexemple>
   <app-switchexemple></app-switchexemple>

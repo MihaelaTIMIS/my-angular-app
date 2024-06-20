@@ -1,6 +1,8 @@
 <div appBold>
+    <ng-content select="[list]"></ng-content>
     <p [ngClass]="{ 'text-danger': isError }">Une erreure est survenue</p>
     <p [style]="currentStyles">Une autre erreure est survenue</p>
+    <ng-content select="[other]"></ng-content>
     <!-- [ngStyle]="currentStyles"  -->
     <!-- [ngStyle] = "{'color' : color }" -->
 </div>
