@@ -56,12 +56,13 @@
           placeholder="Search"
           aria-label="Search"
           value="{{ searchText }}"
-          
+          [(ngModel)]="searchText"
         />
 
         <button class="btn btn-outline-dark" type="submit">Search</button>
       </form>
+      
+  <app-ifexemple></app-ifexemple>
     </div>
   </div>
 </nav>
-<!-- [(ngModel)]="searchText" -->

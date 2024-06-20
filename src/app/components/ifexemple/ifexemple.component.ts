@@ -8,4 +8,11 @@ import { Component } from '@angular/core';
 export class IfexempleComponent {
   userLoggedIn : boolean = false
   usename: string = "Mihaela"
+
+  onConnectToggle(){
+    this.userLoggedIn = !this.userLoggedIn
+    console.log(this.userLoggedIn)
+
+  }
+
 }
