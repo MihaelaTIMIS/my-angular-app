@@ -1,0 +1,22 @@
+<form
+  [formGroup]="form"
+  class="row g-3 align-items-center my-3"
+  (ngSubmit)="onSubmit()"
+>
+  <div class="col-auto">
+    <input type="text" class="form-control" formControlName="email" />
+  </div>
+  <div class="col-auto">
+    <input type="password" class="form-control" formControlName="password" />
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary">Se connecter</button>
+  </div>
+
+  <div class="col-auto" *ngIf="form.value.email && form.value.password">
+    <span id="passwordHelpInline" class="form-text">
+      <b>Email: </b>{{ form.value.email }} <b>Password: </b
+      >{{ form.value.password }}
+    </span>
+  </div>
+</form>

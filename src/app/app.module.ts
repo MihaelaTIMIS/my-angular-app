@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { BodyComponent } from './layout/body/body.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IfexempleComponent } from './components/ifexemple/ifexemple.component';
 import { ForexempleComponent } from './components/forexemple/forexemple.component';
 import { SwitchexempleComponent } from './components/switchexemple/switchexemple.component';
@@ -15,6 +15,7 @@ import { IncrementDecrementComponent } from './components/increment-decrement/in
 import { NgclassExempleComponent } from './components/ngclass-exemple/ngclass-exemple.component';
 import { BoldDirective } from './directives/bold.directive';
 import { LoginComponent } from './components/login/login.component';
+import { Login2Component } from './components/login2/login2.component';
 
 @NgModule({
   declarations: [
@@ -30,12 +31,14 @@ import { LoginComponent } from './components/login/login.component';
     NgclassExempleComponent,
     BoldDirective,
     LoginComponent,
+    Login2Component,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
