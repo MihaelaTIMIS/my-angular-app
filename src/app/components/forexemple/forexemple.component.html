@@ -16,6 +16,7 @@
         class="form-control"
         id="elementInput"
         placeholder="Saisissez un élément"
+       
       />
     </div>
     <div class="col-auto">
@@ -23,6 +24,7 @@
         type="submit"
         class="btn btn-primary mb-3"
         (click)="onAdd(input.value)"
+        (click)="input.value=''"
       >
         Ajouter
       </button>

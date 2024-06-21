@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class ForexempleComponent {
   @Input() items : string[] = []
   @Output() addItemClick = new EventEmitter()
-
+  
   onAdd(item: string){
     if(item === '') return 
     this.addItemClick.emit(item)
