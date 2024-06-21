@@ -14,6 +14,7 @@ import { FruitsComponent } from './components/fruits/fruits.component';
 import { IncrementDecrementComponent } from './components/increment-decrement/increment-decrement.component';
 import { NgclassExempleComponent } from './components/ngclass-exemple/ngclass-exemple.component';
 import { BoldDirective } from './directives/bold.directive';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { BoldDirective } from './directives/bold.directive';
     IncrementDecrementComponent,
     NgclassExempleComponent,
     BoldDirective,
+    LoginComponent,
     
   ],
   imports: [

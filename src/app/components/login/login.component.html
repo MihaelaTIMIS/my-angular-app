@@ -1,0 +1,16 @@
+<form class="row g-3 align-items-center" (ngSubmit) = "onSubmit()">
+    <div class="col-auto">
+        <input class="form-control" type="text" [(ngModel)] = "credentials.email" name="email" >
+    </div>
+    <div class="col-auto">
+        <input class="form-control" type="password" [(ngModel)] = "credentials.password" name="password" >
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-primary" type="submit">Se connecter</button>
+    </div>
+    <div class="col-auto" *ngIf="credentials.email && credentials.password">
+        <span id="passwordHelpInline" class="form-text">
+            <b>Email: </b>{{credentials.email}}  <b>Password: </b>{{credentials.password}}
+        </span>
+      </div>
+</form>
