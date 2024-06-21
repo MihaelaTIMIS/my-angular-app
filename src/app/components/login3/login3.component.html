@@ -1,0 +1,40 @@
+<form
+  #form="ngForm"
+  class="row g-3 align-items-center mb-3"
+  (ngSubmit)="onSubmit(form.value)"
+>
+  <div class="col-auto">
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="credentials.email"
+      required
+      name="email"
+      #emailRef="ngModel"
+    />
+    <div *ngIf="emailRef.invalid && emailRef.touched">
+      <div *ngIf="emailRef.errors?.['required']">Email obligatoire</div>
+    </div>
+  </div>
+  <div class="col-auto">
+    <input
+      type="password"
+      class="form-control"
+      [(ngModel)]="credentials.password"
+      required
+      name="password"
+      #passwordRef="ngModel"
+    />
+    <div *ngIf="passwordRef.invalid && passwordRef.touched">
+      <div *ngIf="passwordRef.errors?.['required']">Password obligatoire</div>
+    </div>
+  </div>
+  <div class="col-auto">
+    <button class="btn btn-primary" type="submit">Se connecter</button>
+  </div>
+  <div class="col-auto" *ngIf="credentials.email && credentials.password"> 
+    <span class="form-text">
+        <b>Email: </b>{{credentials.email}}  <b>Password: </b>{{credentials.password}}
+    </span>
+  </div>
+</form>

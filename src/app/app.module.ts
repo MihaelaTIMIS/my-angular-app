@@ -16,6 +16,7 @@ import { NgclassExempleComponent } from './components/ngclass-exemple/ngclass-ex
 import { BoldDirective } from './directives/bold.directive';
 import { LoginComponent } from './components/login/login.component';
 import { Login2Component } from './components/login2/login2.component';
+import { Login3Component } from './components/login3/login3.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { Login2Component } from './components/login2/login2.component';
     BoldDirective,
     LoginComponent,
     Login2Component,
+    Login3Component,
     
   ],
   imports: [
