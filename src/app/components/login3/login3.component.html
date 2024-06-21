@@ -3,17 +3,26 @@
   class="row g-3 align-items-center mb-3"
   (ngSubmit)="onSubmit(form.value)"
 >
+  <div class="col-auto" *ngIf="credentials.email && credentials.password">
+    <span class="form-text"> Validation of Template Driven Form: </span>
+  </div>
   <div class="col-auto">
     <input
       type="text"
       class="form-control"
       [(ngModel)]="credentials.email"
       required
+      email
       name="email"
       #emailRef="ngModel"
     />
     <div *ngIf="emailRef.invalid && emailRef.touched">
-      <div *ngIf="emailRef.errors?.['required']">Email obligatoire</div>
+      <div *ngIf="emailRef.errors?.['required']" class="text-danger">
+        Email obligatoire
+      </div>
+      <div *ngIf="emailRef.errors?.['email']" class="text-danger">
+        Email invalid
+      </div>
     </div>
   </div>
   <div class="col-auto">
@@ -26,15 +35,18 @@
       #passwordRef="ngModel"
     />
     <div *ngIf="passwordRef.invalid && passwordRef.touched">
-      <div *ngIf="passwordRef.errors?.['required']">Password obligatoire</div>
+      <div *ngIf="passwordRef.errors?.['required']" class="text-danger">
+        Password obligatoire
+      </div>
     </div>
   </div>
   <div class="col-auto">
     <button class="btn btn-primary" type="submit">Se connecter</button>
   </div>
-  <div class="col-auto" *ngIf="credentials.email && credentials.password"> 
+  <div class="col-auto" *ngIf="credentials.email && credentials.password">
     <span class="form-text">
-        <b>Email: </b>{{credentials.email}}  <b>Password: </b>{{credentials.password}}
+      <b>Email: </b>{{ credentials.email }} <b>Password: </b
+      >{{ credentials.password }}
     </span>
   </div>
 </form>

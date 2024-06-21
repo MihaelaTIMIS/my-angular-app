@@ -3,6 +3,9 @@
   class="row g-3 align-items-center my-3"
   (ngSubmit)="onSubmit()"
 >
+  <div class="col-auto" *ngIf="credentials.email && credentials.password">
+    <span class="form-text"> Reactive Form: </span>
+  </div>
   <div class="col-auto">
     <input type="text" class="form-control" formControlName="email" />
   </div>
